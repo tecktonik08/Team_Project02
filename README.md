@@ -6,7 +6,7 @@
 
 
 ## 멤버
-권회동 : PM<br>
-임태혁 : <br>
-유설영 : <br>
-서미오 : <br>
+권회동(tecktonik08) : PM<br>
+임태혁(creamcheasesteak : <br>
+유설영(junanote) : <br>
+서미오(mmeooo) : <br>
