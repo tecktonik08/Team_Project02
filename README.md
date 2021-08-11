@@ -14,11 +14,11 @@
 
 - ##### 임태혁 : Web Scrapping 
 
-- ##### 서미오 :  Web server  
+- ##### 서미오 :  Web Server  
 
 - ##### 유설영 : Deep Learning 
 
-  ##### 
+
 
 ### :pencil2: Skills & Method
 
