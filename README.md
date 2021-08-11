@@ -1,12 +1,31 @@
-# Team_Project02
-
-# 1석1조 팀(임시)
-
-## 
+#  :thumbsup:TEAM 1:thumbsup:
 
 
-## 멤버
-권회동(tecktonik08) : PM, Deep Learning<br>
-임태혁(creamcheasesteak) : Web Scrapping<br>
-유설영(junanote) : Frontend<br>
-서미오(mmeooo) : Backend<br>
+
+
+
+### :eyes: ​Overview
+
+
+
+### :dancers: Team Role
+
+- ##### 권회동 : PM
+
+- ##### 임태혁 : Web Scrapping 
+
+- ##### 서미오 :  Web server  
+
+- ##### 유설영 : Deep Learning 
+
+  ##### 
+
+### :pencil2: Skills & Method
+
+
+
+### :clock3: Project Scheduling
+
+
+
+
