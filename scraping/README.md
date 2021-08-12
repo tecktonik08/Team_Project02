@@ -1,4 +1,4 @@
-# Scrapping
+# Scraping
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-#### :white_square_button: 스크래퍼
+#### :white_square_button:
 
 
 
