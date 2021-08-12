@@ -2,8 +2,6 @@
 # :newspaper:뉴스 기사 헤드라인 & 내용 스크래핑을 통한 감성 분석 및 예측 :thumbsup::thumbsdown:
 
 &nbsp;
-&nbsp;
-
 
 ## :eyes: ​Overview
 
@@ -12,7 +10,6 @@
 - ### 언론사마다 자주 다루는 주제 파악 및 감성분석을 통해,  언론사별 특성 분석
 
 &nbsp;
-
 
 
 ## :pencil2: Skills & Method
@@ -34,9 +31,7 @@
 
 - #### [유설영](https://github.com/junanote) : Deep Learning 
 
-
 &nbsp;
-
 
 
 ## :clock3: Project Scheduling
