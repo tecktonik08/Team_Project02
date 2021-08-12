@@ -22,3 +22,7 @@ def info(request):
 
 def analysis(request):
     return render(request, 'analysis.html')
+
+
+def sample(request):
+    return render(request, 'sample.html')

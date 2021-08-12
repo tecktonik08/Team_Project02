@@ -27,4 +27,7 @@ urlpatterns = [
     path('info', views.info),
     path('analysis', views.analysis),
 
+    path('sample', views.sample),
+
+
 ]

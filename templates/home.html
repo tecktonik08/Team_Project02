@@ -1,172 +1,51 @@
 <!DOCTYPE html>
 <html>
-<title>PROJECT ONE</title>
+<title>TEAM ONE</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
-
-
-<style>
-
-body,h1,h2 {font-family: 'Ubuntu', sans-serif;}
-h3,h4,h5,h6 {font-family: 'Open Sans', sans-serif;}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href ="/static/style.css">
 
 
-.w3-row-padding img {margin-bottom: 12px}
-.bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("static/image/goodbad.jpg");
-  min-height: 100%;
-}
-
-</style>
-
-<!-- start body -->
 <body>
 
-  <!-- Sidebar with image -->
-  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-    <div class="bgimg"></div>
-  </nav>
+  <div class="bgimg w3-display-container w3-text-white">
+      <div class="w3-display-middle w3-center">
+        <h1>Search for Keywords</h1>
+        <div class="search">
+          <h5>Sentiment analysis of articles dealing with keywords you are interested in</h5>
+          <form name="search" action="/analysis" method="GET">
+            <div class="search-form">
+              <input type="text" name="text" placeholder="Enter your Keywords" required><input type="submit" value="Search">
+            </div>
+          </form>
 
-  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-  <nav class="w3-sidebar w3-white w3-animate-right w3-xlarge" style="display:none;padding-top:100px;right:0;z-index:2" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xlarge w3-display-topright" style="padding:0 12px;">
-      <i class="fa fa-remove"></i>
-    </a>
-    <div class="w3-bar-block w3-center">
-      <a href="#home" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-      <a href="#service" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Service</a>
-      <a href="#team" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="w3-main w3-padding-large" style="margin-left:40%">
-
-  <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-
-    <!-- Home Section -->
-    <div id="home" class="w3-display-container w3-center" style="padding:320px 16px" >
-      <h1 class="w3-jumbo"><b>Search for keywords </b></h1>
-      <h5>Sentiment analysis of articles dealing with keywords you are interested in</h5>
-      <div class="box">
-        <div class="w3-container w3-padding-large">
-          <input type="search" id="search" placeholder="Search" />
-          <button class="icon" onclick="location='/analysis'"><i class="fa fa-search"></i></button>
+        <div class="search-link w3-padding-16 text-center">
+          <span>Keywords &nbsp;
+          <a href="/analysis"><i class="fa fa-newspaper-o" >news1</i></a>
+          <a href="/analysis"><i class="fa fa-newspaper-o">news2</i></a>
+          <a href="/analysis"><i class="fa fa-newspaper-o">news3</i></a>
+          <a href="/analysis"><i class="fa fa-newspaper-o">news4</i></a>
+          </span>
         </div>
+
       </div>
     </div>
 
 
-    <!-- Service Section -->
-    <div id="service" class="w3-padding-64 w3-light-grey" style="margin: -24px;">
-      <div class="w3-row-padding">
-        <div class="w3-container w3-center">
-          <h2 class="w3-jumbo"><b>The Service</b></h2>
-          <h3 class="w3-xxlarge w3-text-green"><b>What do we offer?</b></h3>
-          <p><span class="w3-xlarge">Describe the Service.</span> Sentiment analysis of articles dealing with keywords you are interested in.
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <button class="w3-button w3-green w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('modal').style.display='block'">
-            <i class="fa fa-search"></i>Describe Service
-          </button>
-        </div>
-      </div>
+    <div class="w3-display-topleft w3-container">
+      <a href="/info">
+      <p class="w3-large w3-text-white">TEAM ONE</p>
+      </a>
     </div>
 
-      <!-- Service Modal -->
-    <div id="modal" class="w3-modal w3-animate-opacity">
-      <div class="w3-modal-content" style="padding:32px">
-        <div class="w3-container w3-white">
-          <i onclick="document.getElementById('modal').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
-          <h2 class="w3-wide">About Service</h2>
-          <p>detail description~</p>
-        </div>
-      </div>
-    </div>
-
-
-      <!-- Team Section -->
-    <div id="team" class="w3-padding-64 w3-white" style="margin:-24px;">
-      <div class="w3-row-padding">
-        <div class="w3-container w3-center">
-          <h2 class="w3-jumbo"><b>The Team</b></h2>
-          <h3 class="w3-xxlarge w3-text-red"><b>Who are we?</b></h3>
-
-          <div class="w3-padding-32 w3-grayscale" >
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container w3-center">
-                <h3>Hoidong Kwon </h3>
-                <h4 class="w3-opacity">TEAM LEADER</h4>
-                <p>Project Management</p><p>Deep Learning</p>
-                <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/tecktonik08'" target="_blank"><i class="fa fa-envelope"></i> Contact</button></h4>
-              </div>
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container w3-center">
-                <h3>TaeHyeok Im</h3>
-                <h4 class="w3-opacity">TEAM MEMBER</h4>
-                <p>Data Scraping</p><p>Deep Learning</p>
-                <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/creamcheesesteak'" target="_blank"><i class="fa fa-envelope"></i> Contact</button></h4>
-              </div>
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container w3-center">
-                <h3>MiO Seo</h3>
-                <h4 class="w3-opacity">TEAM MEMBER</h4>
-                <p>Web Server</p><p>Web Design</p>
-                <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/mmeooo'" target="_blank"><i class="fa fa-envelope"></i> Contact</button></h4>
-              </div>
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-card">
-              <div class="w3-container w3-center">
-                <h3>SulYoung Yoo</h3>
-                <h4 class="w3-opacity">TEAM MEMBER</h4>
-                <p>Deep Learning</p><p>Data Visualization</p>
-                <h4><button class="w3-button w3-light-grey w3-block" onclick="location.href='https://github.com/junanote'" target="_blank"><i class="fa fa-envelope"></i> Contact</button></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 
-      <!-- Footer -->
-    <footer class="w3-container w3-padding-16 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-      <a href="#home" class="w3-button" style="color:darkgrey;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    </footer>
-
-<!-- END PAGE CONTENT -->
-  </div>
 
 
-  <script>
-  // Open and close sidebar
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
-    document.getElementById("mySidebar").style.display = "block";
-  }
-
-  function closeNav() {
-    document.getElementById("mySidebar").style.display = "none";
-  }
-  </script>
-
-  </body>
+</body>
 </html>
+
