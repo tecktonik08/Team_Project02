@@ -1,7 +1,3 @@
-## :star:TEAM ONE:star:
-
-
-
 ## :newspaper:뉴스 기사 헤드라인 & 내용 스크래핑을 통한 감성 분석 및 예측 :thumbsup::thumbsdown:
 
 
@@ -29,7 +25,7 @@
 ### :pencil2: Skills & Method
 
 - [Scrapping]( )
-- [Deep Learning]( )
+- [Deep Learning](https://github.com/tecktonik08/Team_Project02/DL/README.md)
 - [Web Server]()
 
 
