@@ -25,7 +25,7 @@
 ### :pencil2: Skills & Method
 
 - [Scrapping]( )
-- [Deep Learning](https://github.com/tecktonik08/Team_Project02/DL/README.md)
+- [Deep Learning](https://github.com/tecktonik08/Team_Project02/tree/master/DL)
 - [Web Server]()
 
 
