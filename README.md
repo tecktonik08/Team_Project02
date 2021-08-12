@@ -12,7 +12,7 @@
 &nbsp;
 ## :pencil2: Skills & Method
 
-- ### [Scrapping](https://github.com/tecktonik08/Team_Project02/tree/master/scrapping )
+- ### [Scraping](https://github.com/tecktonik08/Team_Project02/tree/master/scraping )
 - ### [Deep Learning](https://github.com/tecktonik08/Team_Project02/tree/master/DL)
 - ### [Web Server](https://github.com/tecktonik08/Team_Project02/tree/master/templates)
 
@@ -20,7 +20,7 @@
 ## :dancers: Team Role
 - #### [권회동](https://github.com/tecktonik08) : PM
 
-- #### [임태혁](https://github.com/creamcheesesteak) : Web Scrapping 
+- #### [임태혁](https://github.com/creamcheesesteak) : Web Scraping 
 
 - #### [서미오](https://github.com/mmeooo) :  Web Server  
 
