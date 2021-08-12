@@ -10,13 +10,13 @@
 
 ### :dancers: Team Role
 
-- ##### 권회동 : PM
+- ##### [권회동](https://github.com/tecktonik08) : PM
 
-- ##### 임태혁 : Web Scrapping 
+- ##### [임태혁](https://github.com/creamcheesesteak) : Web Scrapping 
 
-- ##### 서미오 :  Web Server  
+- ##### [서미오](https://github.com/mmeooo) :  Web Server  
 
-- ##### 유설영 : Deep Learning 
+- ##### [유설영](https://github.com/junanote) : Deep Learning 
 
 
 
@@ -25,7 +25,6 @@
 
 
 ### :clock3: Project Scheduling
-
 
 
 
