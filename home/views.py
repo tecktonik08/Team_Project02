@@ -17,8 +17,9 @@ def home(request):
     result = {'first':'SemiProject', 'second':'TEAM 1'}
     return render(request, 'home.html', context=result)
 
-def info(request):
-    return render(request, 'info.html')
+def news(request):
+    return render(request, 'news.html')
+
 
 def analysis(request):
     return render(request, 'analysis.html')
