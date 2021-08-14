@@ -4,44 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href ="/static/style.css">
+<link rel="stylesheet" href ="/static/homestyle.css">
 
 
 <body>
 
-  <div class="bgimg w3-display-container w3-text-white">
-      <div class="w3-display-middle w3-center">
-        <h1>Search for Keywords</h1>
-        <div class="search">
-          <h5>Sentiment analysis of articles dealing with keywords you are interested in</h5>
-          <form name="search" action="/analysis" method="GET">
-            <div class="search-form">
-              <input type="text" name="text" placeholder="Enter your Keywords" required><input type="submit" value="Search">
-            </div>
-          </form>
+  <div id="home" class="bgimg w3-display-container w3-text-white">
+    <div class="w3-display-middle w3-center">
+      <h1>Search for Keywords</h1>
+      <div class="search">
+        <h5>Sentiment analysis of articles dealing with keywords you are interested in</h5>
+        <form name="search" action="/news" method="GET">
+          <div class="search-form">
+            <input type="text" name="text" placeholder="Enter your Keywords" required><input type="submit" value="Search">
+          </div>
+        </form>
 
+        <!-- keywords example -->
         <div class="search-link w3-padding-16 text-center">
           <span>Keywords &nbsp;
-          <a href="/analysis"><i class="fa fa-newspaper-o" >news1</i></a>
-          <a href="/analysis"><i class="fa fa-newspaper-o">news2</i></a>
-          <a href="/analysis"><i class="fa fa-newspaper-o">news3</i></a>
-          <a href="/analysis"><i class="fa fa-newspaper-o">news4</i></a>
+          <a href="/analysis"><i class="fa fa-newspaper-o">news1&nbsp;</i></a>
+          <a href="/analysis"><i class="fa fa-user">news2&nbsp;</i></a>
+          <a href="/analysis"><i class="fa fa-diamond">news3&nbsp;</i></a>
+          <a href="/analysis"><i class="fa fa-home">news4&nbsp;</i></a>
           </span>
         </div>
+      </div>
+    </div>
 
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#team">Team</a></li>
+
+    </ul>
+
+  </div>
+  <!-- end 1st container -->
+
+  <!-- Service Section -->
+    <div id="service" class="w3-padding-64 w3-light-grey" style="margin: -24px;">
+      <div class="w3-row-padding">
+        <div class="w3-container w3-center">
+          <h2><b>The Service</b></h2>
+          <h3 class="w3-text-teal"><b>What do we offer?</b></h3>
+          <p><span>Describe the Service.</span> Sentiment analysis of articles dealing with keywords you are interested in.
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <button class="w3-button w3-teal w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('modal').style.display='block'">
+            <i class="fa fa-search"></i>&nbsp;Describe Service
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <!-- Service Modal -->
+    <div id="modal" class="w3-modal w3-animate-opacity">
+      <div class="w3-modal-content" style="padding:32px">
+        <div class="w3-container w3-white">
+          <i onclick="document.getElementById('modal').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+          <h2 class="w3-wide">About Service</h2>
+          <p>detail description~</p>
+        </div>
       </div>
     </div>
 
 
-    <div class="w3-display-topleft w3-container">
-      <a href="/info">
-      <p class="w3-large w3-text-white">TEAM ONE</p>
-      </a>
-    </div>
+      <!-- Team Section -->
+    <div id="team" class="w3-padding-64 w3-white" style="margin:-24px;">
+      <div class="w3-row-padding">
+        <div class="w3-container w3-center">
+          <h2><b>The Team</b></h2>
+          <h3 class="w3-text-teal"><b>Who are we?</b></h3>
 
+          <div class="w3-padding-32 w3-grayscale">
+          <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+              <div class="w3-container w3-center">
+                <h4>Hoidong Kwon </h4>
+                <h5 class="w3-opacity">TEAM LEADER</h5>
+                <p>Project Management</p><p>Deep Learning</p>
+                <h5><button class="w3-button w3-teal w3-block" onclick="location.href='https://github.com/tecktonik08'"><i class="fa fa-envelope"></i> Contact</button></h5>
+              </div>
+            </div>
+          </div>
+          <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+              <div class="w3-container w3-center">
+                <h4>TaeHyeok Im</h4>
+                <h5 class="w3-opacity">TEAM MEMBER</h5>
+                <p>Web Scraping</p><p>Deep Learning</p>
+                <h5><button class="w3-button w3-teal w3-block" onclick="location.href='https://github.com/creamcheesesteak'"><i class="fa fa-envelope"></i> Contact</button></h5>
+              </div>
+            </div>
+          </div>
+          <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+              <div class="w3-container w3-center">
+                <h4>MiO Seo</h4>
+                <h5 class="w3-opacity">TEAM MEMBER</h5>
+                <p>Web Server</p><p>Web Design</p>
+                <h5><button class="w3-button w3-teal w3-block" onclick="location.href='https://github.com/mmeooo'"><i class="fa fa-envelope"></i> Contact</button></h5>
+              </div>
+            </div>
+          </div>
+          <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-card">
+              <div class="w3-container w3-center">
+                <h4>SulYoung Yoo</h4>
+                <h5 class="w3-opacity">TEAM MEMBER</h5>
+                <p>Deep Learning</p><p>Data Visualization</p>
+                <h5><button class="w3-button w3-teal w3-block" onclick="location.href='https://github.com/junanote'"><i class="fa fa-envelope"></i> Contact</button></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey w3-center w3-opacity" style="margin:-24px">
+    <a href="#home" class="w3-button" style="color:dark-grey;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+
 
 
 
