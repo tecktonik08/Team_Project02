@@ -21,13 +21,10 @@
 # home/views.py
 def analysis(request):
     nation = request.GET.get('nation')
-    
-    어쩌구저쩌구해서
-   	기사리스트.append(df[['date','press', 'name', 'title', total_text]])
+   
     
     context = {
         'nation':nation,
-        '기사리스트(html에서 사용할 변수)': 기사리스트,
     }
     
     return render(request, 'analysis.html', context)
@@ -45,7 +42,16 @@ def 검색어관련기사출력(request):
     c.execute(설렉트문)
     작성하신 코드를 아래에 붙임
     이때 id로 따와서 select문 전체를 프린트 할 수 있음 
-
+    
+    
+    어쩌구저쩌구해서
+   	기사리스트.append(df[['date','press', 'name', 'title', total_text]])
+   
+	context = {
+        'nation':nation,
+        '기사리스트(html에서 사용할 변수)': 기사리스트,
+    }
+    return render(request, '보낼템플릿.html', context)
 ```
 
 ```letter
