@@ -19,92 +19,89 @@
   <!-- Header  -->
   <ul>
     <li><a class="active" href="/home" >Home</a></li>
-    <li><a href="#">???</a></li>
-    <li><a href="#">???</a></li>
+    <li><a href="#visual">Visualization</a></li>
+    <li><a href="#list">List</a></li>
   </ul>
 
   <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center" style="text-align: center;">
-      <h1>News Article List</h1>
+    <div class="section-title" >
+      <h1>Keyword &nbsp;{{ keyword }}</h1>
     </div>
   </header>
 
-    <!-- ======= About Us Section ======= -->
-  <section id="about" class="about">
+    <!-- Visualization Section-->
+  <section id="visual" class="visual">
       <div class="container">
-
-        <div class="section-title w3-row-padding w3-grayscale" style="margin-bottom:128px">
-          <div class="w3-half">
-            <h2>positive</h2>
-            <p>news1</p>
-            <p>news2</p>
-            <p>news3</p>
-            <p>news4</p>
-            <p>news5</p>
-          </div>
-
-          <div class="w3-half">
-            <h2>negative</h2>
-            <p>news1</p>
-            <p>news2</p>
-            <p>news3</p>
-            <p>news4</p>
-            <p>news5</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Us Section -->
-
-    <!-- list Section ======= -->
-  <section id="list" class="list">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Article</h2>
-        </div>
 
         <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <a href="/analysis" target="_blank">
-                <div class="news">
-                  <i class="fa fa-search"></i>
-                  <h4>News 1</h4>
-                  <p>내용~~</p>
-                </div>
-              </a>
-
-              <a href="/analysis"  target="_blank">
-                <div class="news">
-                  <i class="fa fa-search"></i>
-                  <h4>News 1</h4>
-                  <p>내용~~</p>
-                </div>
-              </a>
-
-              <a href="/analysis"  target="_blank">
-                <div class="news">
-                  <i class="fa fa-search"></i>
-                  <h4>News 1</h4>
-                  <p>내용~~</p>
-                </div>
-              </a>
+          <div class="w3-col l6">
+            <div class="network">
 
             </div>
+          </div>
+
+          <div class="w3-col l6">
+              <div class="wordcloud">
+
+              </div>
           </div>
         </div>
 
       </div>
     </section>
-  <!-- End Contact Us Section -->
 
+
+
+  <!-- list Section ======= -->
+  <section id="list" class="list">
+      <div class="container">
+        <div class="section-title">
+          <h2>Article</h2>
+        </div>
+        <div class="row">
+              <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
+            <div class="info">
+                {% for row in erows %}
+                <div class="news" onclick="document.getElementById('modal').style.display='block'">
+                    <i class="fa fa-search"></i>
+                    <h4>{{row.title}}</h4>
+                    <p>{{row.date}}&nbsp;{{row.press}}</p>
+                    <h6>{{row.topkeyword}}</h6>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+
+  <!--  Modal -->
+  <div id="modal" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content" style="padding:32px">
+      <div id="modalcontent" class="w3-container w3-white">
+        <i onclick="document.getElementById('modal').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+        <h2 class="w3-wide w3-padding-24">Detail</h2>
+
+          <div class="news w3-text-black" onclick="document.getElementById('modal').style.display='block'">
+              <h4></h4>
+              <p></p>
+          </div>
+
+      </div>
+    </div>
+  </div>
 
 
   <!--  Footer -->
   <footer class="w3-container w3-padding-16 w3-center">
       <a href="#header" class="w3-button w3-hover-teal"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   </footer>
+
+
+<script>
+
+</script>
 
 
 </body>

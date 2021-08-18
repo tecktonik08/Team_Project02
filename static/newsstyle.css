@@ -25,7 +25,6 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #3330;
-  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
 }
@@ -50,43 +49,38 @@ li a:hover {
 }
 
 
-
 @media (min-width: 1024px) {
   body {
     background-attachment: fixed;
   }
 }
 
-a {
+
+.news {
   color: #ffffff;
   text-decoration: none;
 }
 
-a:hover {
+.news:hover {
   color: #36d8c3;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
 
 #main {
   position: relative;
 }
 
 
-
 #header {
   position: relative;
   width: 100%;
-  padding: 100px 0;
-  /* countdown */
+  padding: 80px 0;
 }
 
 #header h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -132,13 +126,30 @@ section {
   padding-bottom: 30px;
 }
 
-.section-title h2 {
-  font-size: 32px;
+.section-title h1 {
+  font-size: 40px;
   font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+}
+.section-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #24b7a4;
+  bottom: 0;
+  left: calc(50% - 25px);
 }
 
 .section-title h2::after {
@@ -156,23 +167,53 @@ section {
   margin-bottom: 0;
 }
 
-.about .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-  text-transform: uppercase;
+
+/* visual */
+.visual {
+  border-top: 3px solid #24b7a4;
+  border-bottom: 3px solid #24b7a4;
+  padding: 30px;
+  /* background: rgba(255, 255, 255, 0.06);*/
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.about .title a {
+.visual i {
+  font-size: 20px;
   color: #fff;
-  transition: 0.3s;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
-.about .description {
-  line-height: 24px;
+.visual .network h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.visual .network p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
   font-size: 14px;
 }
+.visual {
+  width: 100%;
+  border-top: 3px solid #24b7a4;
+  border-bottom: 3px solid #24b7a4;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
 
+
+/* news list */
 
 .list .info {
   border-top: 3px solid #24b7a4;
@@ -182,7 +223,6 @@ section {
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
-
 .list .info i {
   font-size: 20px;
   color: #fff;
@@ -199,19 +239,19 @@ section {
 
 .list .info h4 {
   padding: 0 0 0 60px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-
 .list .info p {
   padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
-
-.list .info .email p {
-  padding-top: 5px;
+.list .info h6 {
+  padding: 0 0 10px 60px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .list .info .news:hover i {
@@ -219,6 +259,18 @@ section {
   color: #fff;
 }
 
+/* modal */
+.modal h4 {
+  padding: 0 0 0 60px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.modal p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
 
 @-webkit-keyframes animate-loading {
   0% {

@@ -25,6 +25,8 @@ urlpatterns = [
     path('', views.home),
     path('home', views.home),
     path('news', views.news),
+
+
     path('analysis', views.analysis),
 
     path('sample', views.sample),
