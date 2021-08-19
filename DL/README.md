@@ -11,8 +11,9 @@
 ![image](https://user-images.githubusercontent.com/85272350/130069716-82533f59-75d8-495e-bb19-cdb65b4131fa.png)
 <br> Mecab을 활용한 한국어 형태소 분석을 통해 기사 전문을 어근으로 나누어 줍니다.
 <br> 수업시간에 배운 Okt와 Mecab 중 Mecab의 형태소 분석이 더 정확하다는 의견이 많아 Mecab을 활용하여 아래와 같은 함수에 활용하였습니다.
+
 ![image](https://user-images.githubusercontent.com/85272350/130070986-54d18e8a-8513-4992-ad15-316a670009a3.png)
-re모듈의 sub함수를 활용하여 가~힣, 한글 자음과 ㅠ를 제외한 문자를 ''로 대체하고 Stopwords 리스트를 활용하여 조사와 불용어 등을 제외합니다.
+<br>re모듈의 sub함수를 활용하여 가~힣, 한글 자음과 ㅠ를 제외한 문자를 ''로 대체하고 Stopwords 리스트를 활용하여 조사와 불용어 등을 제외합니다.
 
 #### :white_square_button: 뉴스의 긍정, 부정 판단
 
@@ -32,6 +33,12 @@ re모듈의 sub함수를 활용하여 가~힣, 한글 자음과 ㅠ를 제외한
 ![image](https://user-images.githubusercontent.com/85272350/130077587-d3fbcc2f-f7f5-42b0-aa69-029d94abc56f.png)
 <br>hist_len과 히스토그래프를 통해 각 단어의 평균 length를 구합니다.
 
+![image](https://user-images.githubusercontent.com/85272350/130078573-2435e53b-0af1-4dac-a460-05485ce884b4.png)
+<br>y의 최소값을 0으로 맞추어 주기위해 각 결과에 +1을 해줍니다.
+
+![image](https://user-images.githubusercontent.com/85272350/130078799-c9992f00-434d-46d5-a417-6eec52bd1f34.png)
+<br>keras 그림
+<br>Keras model을 생성합니다.
 
 #### :white_square_button: 시각화
 
