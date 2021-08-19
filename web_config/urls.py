@@ -30,6 +30,7 @@ urlpatterns = [
     path('analysis', views.analysis),
 
     path('sample', views.sample),
+    path('test', views.test),
 
 
 ]
