@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&family=Raleway&display=swap" rel="stylesheet">
 <link rel="stylesheet" href ="/static/homestyle.css">
 
 
@@ -14,9 +14,9 @@
 
   <div id="home" class="bgimg w3-display-container w3-text-white">
     <div class="w3-display-middle w3-center">
-      <h1>Search for Keywords</h1>
+      <h1 style="font-size: 40px;">Sentiment Analysis</h1>
       <div class="search">
-        <h5>Sentiment analysis of articles dealing with keywords you are interested in</h5>
+        <h4>Articles dealing with keywords you are interested in</h4>
         <form name="search" action="/news" method="GET">
           <div class="search-form">
             <input name="keyword" type="text" placeholder="Enter your Keyword" required><input type="submit" value="Search">
@@ -25,11 +25,12 @@
 
         <!-- Press Search Form-->
         <div class="search-link w3-padding-16 text-center">
+          <h3>Analysis of press' political bias</h3>
            <form name="search" action="/test" method="GET">
              <div class="search-form">
                <input type="hidden">
                 <select name="press" style="border-style: none;">
-                  <option value="" disabled selected hidden>Provide Political References covered by selected Press. </option>
+                  <option value="" disabled selected hidden>Choose a Press </option>
                   <option value="경향신문">경향신문</option><option value="매일경제">매일경제</option><option value="중앙일보">중앙일보</option>
                 </select>
                <input type="submit" value="Search">
@@ -38,11 +39,11 @@
           </div>
 
         <!-- keywords example -->
-        <div class="search-link w3-padding-16 text-center">
+        <!-- div class="search-link w3-padding-16 text-center">
           <span>Keywords&nbsp;
             <a>환경</a>&nbsp;<a>원자력</a>&nbsp;<a>모더나</a>&nbsp;<a>거리두기</a>
           </span>
-        </div>
+        </div> -->
 
 
       </div>
@@ -62,11 +63,11 @@
     <div id="service" class="w3-padding-64 w3-light-grey" style="margin: -24px;">
       <div class="w3-row-padding">
         <div class="w3-container w3-center">
-          <h2><b>The Service</b></h2>
-          <h3 class="w3-text-teal"><b>What do we offer?</b></h3>
-          <p><span>Describe the Service.</span> Sentiment analysis of articles dealing with keywords you are interested in.
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <button class="w3-button w3-teal w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('modal').style.display='block'">
+          <h1><b>The Service</b></h1>
+          <h3 class="w3-text-teal" style="margin-bottom: 35px;"><b>What do we offer?</b></h3>
+          <h4>Web scraping articles dealing with topics you are interested in.  Provide sentiment analysis on top keywords. </h4>
+          <h4>Identify the topics frequently covered by each press. Using this, Infer the political bias of each press.</h4>
+          <button class="w3-button w3-teal w3-padding-large w3-section w3-hide-small w3-large" onclick="document.getElementById('modal').style.display='block'">
             <i class="fa fa-search"></i>&nbsp;Describe Service
           </button>
         </div>
@@ -76,10 +77,16 @@
       <!-- Service Modal -->
     <div id="modal" class="w3-modal w3-animate-opacity">
       <div class="w3-modal-content" style="padding:32px">
-        <div class="w3-container w3-white">
+        <div class="w3-container w3-white" style="font-family:'Gothic A1';">
           <i onclick="document.getElementById('modal').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
-          <h2 class="w3-wide">About Service</h2>
-          <p>detail description~</p>
+          <h2 class="w3-wide w3-padding-24">About Service</h2>
+          <h4>1. 관심있는 키워드를 다룬 기사를 분석합니다. </h4>
+          <p>국립국어원에서 제공하는 말뭉치를 이용해서 빈도수를 파악합니다. 그 중 빈번하게 언급되는 상위 10~20위 선정하여 word2vec을 이용해 위치를 표시합니다. 상위 키워드를 선택하면 연관된 단어가 10개가 나타나도록 시각화합니다.</p>
+          <p>상위 키워드에 대한 감성 분석을 진행합니다. '빅카인즈'를 스크래핑해 추출한 기사 전문에 대한 감성 분석을 통해 결과를 제시합니다. </p>
+          <h4>2. 관심있는 키워드를 다룬 기사를 분석합니다.</h4>
+          <p>???</p>
+          <h4>3. 언론사의 정치적 성향에 대해 분석합니다. </h4>
+          <p>모든 뉴스기사의 [날짜, 제목, 언론사, 기자, 전문내용]을 스크래핑합니다. 이때 언론사별로 정치적 주제를 다룬 기사 수를 파악해 정치적 성향을 도출합니다.</p>
         </div>
       </div>
     </div>
@@ -89,9 +96,8 @@
     <div id="team" class="w3-padding-64 w3-white" style="margin:-24px;">
       <div class="w3-row-padding">
         <div class="w3-container w3-center">
-          <h2><b>The Team</b></h2>
+          <h1><b>The Team</b></h1>
           <h3 class="w3-text-teal"><b>Who are we?</b></h3>
-
           <div class="w3-padding-32 w3-grayscale">
           <div class="w3-col l4 w3-margin-bottom">
             <div class="w3-card">
