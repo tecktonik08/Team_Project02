@@ -8,28 +8,27 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&family=Raleway&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/static/newsstyle.css" >
-
 
 
 <body>
   <!-- Header  -->
   <ul>
-    <li><a class="active" href="/home" >Home</a></li>
+    <li><a class="active" href="/home">Home</a></li>
     <li><a href="#visual">Visualization</a></li>
-    <li><a href="#list">List</a></li>
+    <li><a href="#list">NewsList</a></li>
   </ul>
 
-  <header id="header" class="d-flex align-items-center">
-    <div class="section-title">
-      <h1>Keyword &nbsp;{{ keyword }}</h1>
-    </div>
+  <header id="header" class="texts-center">
+      <div class="section-title">
+        <h1>Keyword &nbsp;{{ keyword }}</h1>
+      </div>
   </header>
 
     <!-- Visualization Section-->
@@ -37,15 +36,15 @@
       <div class="w3-container">
         <div class="row">
             <div class="w3-col l6">
-            <h3 style="margin-left:30px"> Word Cloud</h3>
+            <h3 style="margin-left:30px; margin-bottom: 20px;"> Word Cloud</h3>
               <div class="wordcloud">
                   <img src="{{ wc }}" width="100%" height="100%" >
               </div>
             </div>
-            <h3 style="margin-left:30px"> NetworkX</h3>
+            <h3 style="margin-left:30px; margin-bottom: 20px;"> NetworkX</h3>
             <div class="w3-col l6">
                 <div class="network">
-    <!--                  <img src="{{ nx }}" width="100%" height="100%" >-->
+                    <img src="{{ nx }}" width="100%" height="100%">
                 </div>
             </div>
         </div>
@@ -54,34 +53,37 @@
 
 
 
-  <!-- list Section ======= -->
+  <!-- Newslist Section -->
   <section id="list" class="list">
-      <div class="section-title">
-          <h2>Article</h2>
-        </div>
-        <div class="list">
-            <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
-            <div class="info">
-                {% for row in erows %}
-                <!-- News List -->
-                <div class="news">
-                    <a href="#demo" class="w3-text-white" data-toggle="collapse">
-                        <i class="fa fa-search"></i>
-                        <h4>{{row.title}}</h4>
-                        <p>{{row.date}} &nbsp; {{row.press}}</p>
-                        <h6>{{row.topkeyword}}</h6></a>
-                      <div id="demo" class="collapse">
-                          <h4></h4>
-                          <p>{{row.url}}</p>
+      <div class="section-title"><h2>Article</h2></div>
+      <div class="list">
+          <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
+          <div class="info">
+              <!-- News List -->
+              {% for row in erows %}
+              <div class="news w3-padding-24" style="font-family:'Gothic A1';">
+                  <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <a href="#collapse{{forloop.counter}}" data-toggle="collapse" data-parent="#accordion" class="w3-text-white">
+                                  <i class="fa fa-search"></i>
+                                  <h4>{{row.title}}</h4>
+                                  <p>{{row.date}} &nbsp;{{row.press}}</p>
+                              </a>
+                          </div>
+                          <div id="collapse{{forloop.counter}}" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <p>{{row.topkeyword}}</p>
+                                  <p><a href="{{row.url}}" target="_blank">{{row.url}}</a></p>
+                              </div>
+                          </div>
                       </div>
-                </div>
-                {% endfor %}
+                  </div>
+              </div>
+              {% endfor %}
             </div>
         </div>
-
-    </section>
-
-
+  </section>
 
 
 
