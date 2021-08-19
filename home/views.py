@@ -50,21 +50,23 @@ def news(request):
     result['total_cnt'] = total_cnt
 
     # 워드클라우드
-    # keylist = []
-    # for row in data:
-    #  keylist.append(row['topkeyword'].split(','))
-    #  for i in range(len(keylist)):
-    #     count = Counter(keylist[i])
-    #     count.update(keylist[i])
-    #  remove_char_counter = Counter({x: count[x] for x in count if len(x) > 2})
-    #
-    # plt.figure(figsize=(10, 5))
-    # plt.rc('font', family='NanumGothic')
-    # plt.axis("off")
-    # wc = WordCloud(relative_scaling=0.2, background_color='black').generate_from_frequencies(remove_char_counter)
-    # plt.savefig('/static/image/' + keyword + '.png')
-
-    #result['wc'] = plt.imshow(wc)
+    keylist = []
+    for row in data:
+     keylist.append(row['topkeyword'].split(','))
+     for i in range(len(keylist)):
+        count = Counter(keylist[i])
+        count.update(keylist[i])
+     remove_char_counter = Counter({x: count[x] for x in count if len(x) > 2})
+    wordcloud = WordCloud(relative_scaling=0.2, background_color='black',
+                          font_path="static/NanumBarunGothic.ttf",
+                          mode='RGB', collocations=True, colormap=None,
+                          normalize_plurals=True).generate_from_frequencies(remove_char_counter)
+    plt.figure(figsize=(15, 8), dpi=100)
+    ax = plt.axes([0, 0, 1, 1])
+    plt.imshow(wordcloud, interpolation="nearest", aspect="auto")
+    plt.axis("off")
+    plt.savefig('static/image/'+keyword + 'wc.png')
+    result['wc'] = 'static/image/'+keyword + 'wc.png'
 
     # 네트워크 그래프
 
