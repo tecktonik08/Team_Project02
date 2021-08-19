@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
+<meta content="target-densitydpi=device-dpi, width=device-width, initial-scale=1" name="viewport">
+<title>NEWS</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <meta charset="utf-8">
-  <meta content="target-densitydpi=device-dpi, width=device-width, initial-scale=1" name="viewport">
-  <title>NEWS</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-  <link rel="stylesheet" href="/static/newsstyle.css" >
+<link rel="stylesheet" href="/static/newsstyle.css" >
 
 
 
@@ -31,19 +34,22 @@
 
     <!-- Visualization Section-->
   <section id="visual" class="visual">
+
       <div class="container">
-
         <div class="row">
-          <div class="w3-col l6">
-            <div class="network">
-
-            </div>
-          </div>
-
+            <h3 style="margin-left:30px"> Word Cloud</h3>
           <div class="w3-col l6">
               <div class="wordcloud">
-
+                  <img src="{{ wc }}" width="100%" height="100%" >
               </div>
+          </div>
+            <h3 style="margin-left:30px"> NetworkX</h3>
+            <div class="w3-col l6">
+            <div class="network">
+                  <img src="{{ nx }}" width="100%" height="100%" >
+
+
+            </div>
           </div>
         </div>
 
@@ -58,39 +64,30 @@
         <div class="section-title">
           <h2>Article</h2>
         </div>
-        <div class="row">
-              <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
+        <div class="list">
+            <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
             <div class="info">
                 {% for row in erows %}
-                <div class="news" onclick="document.getElementById('modal').style.display='block'">
-                    <i class="fa fa-search"></i>
-                    <h4>{{row.title}}</h4>
-                    <p>{{row.date}}&nbsp;{{row.press}}</p>
-                    <h6>{{row.topkeyword}}</h6>
+                <!-- News List -->
+                <div class="news">
+                    <a href="#demo" class="w3-text-white" data-toggle="collapse">
+                        <i class="fa fa-search"></i>
+                        <h4>{{row.title}}</h4>
+                        <p>{{row.date}} &nbsp; {{row.press}}</p>
+                        <h6>{{row.topkeyword}}</h6></a>
+                      <div id="demo" class="collapse">
+                          <h4></h4>
+                          <p>{{row.url}}</p>
+                      </div>
                 </div>
                 {% endfor %}
             </div>
-          </div>
         </div>
-
+      </div>
     </section>
 
 
-  <!--  Modal -->
-  <div id="modal" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content" style="padding:32px">
-      <div id="modalcontent" class="w3-container w3-white">
-        <i onclick="document.getElementById('modal').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
-        <h2 class="w3-wide w3-padding-24">Detail</h2>
 
-          <div class="news w3-text-black" onclick="document.getElementById('modal').style.display='block'">
-              <h4></h4>
-              <p></p>
-          </div>
-
-      </div>
-    </div>
-  </div>
 
 
   <!--  Footer -->
@@ -98,10 +95,6 @@
       <a href="#header" class="w3-button w3-hover-teal"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   </footer>
 
-
-<script>
-
-</script>
 
 
 </body>
