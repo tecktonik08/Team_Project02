@@ -29,7 +29,7 @@ def home(request):
 
 def news(request):
     result = dict()
-    db_news = sqlite3.connect('static/news.db')
+    db_news = sqlite3.connect('static/reset.db')
     db_news.row_factory = sqlite3.Row
     c = db_news.cursor()
 
@@ -38,7 +38,7 @@ def news(request):
     result['keyword'] = keyword
 
     # 키워드를 다룬 뉴스기사들
-    c.execute("select id, date,press,title,topkeyword,url from newspapers where topkeyword like '%{}%';".format(keyword))
+    c.execute("select id,date,press,title,topkeyword,total_body,url from newspapers where topkeyword like '%{}%';".format(keyword))
     data = c.fetchall()
     result['erows'] = data
 
@@ -49,8 +49,24 @@ def news(request):
     total_cnt =  int(cnt_curs[0])
     result['total_cnt'] = total_cnt
 
-    # 모달창
+    # 워드클라우드
+    # keylist = []
+    # for row in data:
+    #  keylist.append(row['topkeyword'].split(','))
+    #  for i in range(len(keylist)):
+    #     count = Counter(keylist[i])
+    #     count.update(keylist[i])
+    #  remove_char_counter = Counter({x: count[x] for x in count if len(x) > 2})
+    #
+    # plt.figure(figsize=(10, 5))
+    # plt.rc('font', family='NanumGothic')
+    # plt.axis("off")
+    # wc = WordCloud(relative_scaling=0.2, background_color='black').generate_from_frequencies(remove_char_counter)
+    # plt.savefig('/static/image/' + keyword + '.png')
 
+    #result['wc'] = plt.imshow(wc)
+
+    # 네트워크 그래프
 
 
 
@@ -62,7 +78,8 @@ def news(request):
 def analysis(request):
     return render(request, 'analysis.html')
 
-
+def test(request):
+    return render(request, 'test.html')
 
 
 def sample(request):
