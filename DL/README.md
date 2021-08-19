@@ -8,25 +8,38 @@
 
 #### :white_square_button: 기사에 사용된 단어를 통한 긍정/부정 분류​
 
-Mecab을 활용한 한국어 형태소 분석
 ![image](https://user-images.githubusercontent.com/85272350/130069716-82533f59-75d8-495e-bb19-cdb65b4131fa.png)
-수업시간에 배운 Okt와 Mecab 중 Mecab의 형태소 분석이 더 정확하다는 의견이 많아 Mecab을 활용하여 아래와 같은 함수에 활용하였습니다.
+<br> Mecab을 활용한 한국어 형태소 분석을 통해 기사 전문을 어근으로 나누어 줍니다.
+<br> 수업시간에 배운 Okt와 Mecab 중 Mecab의 형태소 분석이 더 정확하다는 의견이 많아 Mecab을 활용하여 아래와 같은 함수에 활용하였습니다.
 ![image](https://user-images.githubusercontent.com/85272350/130070986-54d18e8a-8513-4992-ad15-316a670009a3.png)
+re모듈의 sub함수를 활용하여 가~힣, 한글 자음과 ㅠ를 제외한 문자를 ''로 대체하고 Stopwords 리스트를 활용하여 조사와 불용어 등을 제외합니다.
+
+#### :white_square_button: 뉴스의 긍정, 부정 판단
+
 
 
 #### :white_square_button: Keras Model을 통한 결과 예측
 
-분류된 결과
 ![image](https://user-images.githubusercontent.com/85272350/130069275-1b0b564d-8c7e-47a0-a705-3a1bb00368a6.png)
+<br>뉴스 기사 전문을 x_data, 분류된 결과를 y_data로 변수에 저장합니다.
 
 ![image](https://user-images.githubusercontent.com/85272350/130070412-85d33fa3-e818-46f5-b2ce-fcb90dc3b8f9.png)
-Mecab을 통하여 x값(기사 본문)을 각 형태소별로 나눠줍니다.
+<br>Mecab을 통하여 x값(기사 본문)을 각 형태소별로 나눠줍니다.
 
-#### :white_square_button: 
+![image](https://user-images.githubusercontent.com/85272350/130077305-1b97cd08-4e6a-4c88-9953-2030a6b032be.png)
+<br>Tokenizer 함수를 통해 x_data의 형태소를 각 숫자에 대입합니다.
 
+![image](https://user-images.githubusercontent.com/85272350/130077587-d3fbcc2f-f7f5-42b0-aa69-029d94abc56f.png)
+<br>hist_len과 히스토그래프를 통해 각 단어의 평균 length를 구합니다.
 
 
 #### :white_square_button: 시각화
 
-워드클라우드를 통해 긍정적인 
+![image](https://user-images.githubusercontent.com/85272350/130075714-30c676f3-3cf6-49fa-a367-a2a7412f23f0.png)
+<br> 딥러닝을 통해 분석된 긍정, 부정 단어 Dictionary인 pos_count, neg_count를 토대로 Wordcloud의 형태(Mask), size, font를 지정하여 Wordcloud를 생성합니다.
 
+![image](https://user-images.githubusercontent.com/85272350/130075829-bdc251fb-0eb2-40a2-abe8-554df5941b99.png)
+<br> 긍정적인 단어의 Wordcloud
+
+![image](https://user-images.githubusercontent.com/85272350/130076468-7952e11c-211e-4c86-ab00-df3ff71bce4f.png)
+<br> 부정적인 단어의 Wordcloud
