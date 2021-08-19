@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+  <script src='https://cdn.plot.ly/plotly-2.3.1.min.js'></script>
+  <script src='https://cdn.plot.ly/plotly-2.3.1.min.js'></script>
+<body>
+<center>
+    </div>
+    <div id='bias'><!-- Plotly chart will be drawn inside this DIV --></div>
+      <script>
+        var trace1 = {
+          x: {{ x_keys | safe}},
+          y: {{ y_rests | safe}},
+          name: 'rest article',
+          type: 'bar'
+        };
+
+        var trace2 = {
+          x: {{ x_keys | safe}},
+          y: {{ y_negatives | safe}},
+          name: 'negative article',
+          type: 'bar'
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {barmode: 'stack',
+            height: 500,
+            width: 1100,
+            title: {text: 'politician_reference', xref: 'paper', x: 1,},
+
+            showlegend: true,
+            legend: {
+              x: 1,
+              xanchor: 'right',
+              y: 1 }
+            };
+
+        Plotly.newPlot('bias', data, layout);
+      </script>
+    <div id='average'><!-- Plotly chart will be drawn inside this DIV --></div>
+      <script>
+        var data = [
+          {
+            x: {{ x_keys | safe}},
+            y: {{ y_averages | safe}},
+            type: 'bar'
+          }
+        ];
+        var layout = {
+            height: 250,
+            width: 1100,
+            title: {text: 'average_reference', xref: 'paper', x: 1,},
+            };
+        Plotly.newPlot('average', data, layout);
+      </script>
+    <img src="static/image/political_bias.jpg", width="1000", height="400", alt="My Image">
+</center>
+</body>
+</html>

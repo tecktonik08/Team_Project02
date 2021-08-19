@@ -11,7 +11,8 @@
 
   <link rel="stylesheet" href="/static/analysisstyle.css" >
 
-
+  <script src='https://cdn.plot.ly/plotly-2.3.1.min.js'></script>
+  <script src='https://cdn.plot.ly/plotly-2.3.1.min.js'></script>
 <body>
 
   <!-- Header  -->
@@ -31,6 +32,43 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
+    <div id='bias'><!-- Plotly chart will be drawn inside this DIV --></div>
+      <script>
+        var trace1 = {
+          x: {{ x_keys | safe}},
+          y: {{ y_rests | safe}},
+          name: 'rest article',
+          type: 'bar'
+        };
+
+        var trace2 = {
+          x: {{ x_keys | safe}},
+          y: {{ y_negatives | safe}},
+          name: 'negative article',
+          type: 'bar'
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {barmode: 'stack'};
+
+        Plotly.newPlot('bias', data, layout);
+      </script>
+
+
+    <div id='average'><!-- Plotly chart will be drawn inside this DIV --></div>
+      <script>
+        var data = [
+          {
+            x: {{ x_keys | safe}},
+            y: {{ y_averages | safe}},
+            type: 'bar'
+          }
+        ];
+        Plotly.newPlot('average', data);
+      </script>
+    <img src="political_bias.jpg", alt="My Image">
+
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
       <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
