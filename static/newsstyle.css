@@ -127,7 +127,7 @@ section {
 }
 
 .section-title h1 {
-
+  text-align: center;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -141,7 +141,6 @@ section {
   padding-bottom: 20px;
   position: relative;
 }
-
 .section-title h1::after {
   content: '';
   position: absolute;
@@ -152,7 +151,6 @@ section {
   bottom: 0;
   left: calc(50% - 25px);
 }
-
 .section-title h2::after {
   content: '';
   position: absolute;
@@ -163,7 +161,6 @@ section {
   bottom: 0;
   left: calc(50% - 25px);
 }
-
 .section-title p {
   margin-bottom: 0;
 }

@@ -8,14 +8,13 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 <link rel="stylesheet" href="/static/newsstyle.css" >
-
 
 
 <body>
@@ -56,32 +55,35 @@
 
   <!-- list Section ======= -->
   <section id="list" class="list">
-      <div class="section-title">
-          <h2>Article</h2>
-        </div>
-        <div class="list">
-            <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
-            <div class="info">
-                {% for row in erows %}
-                <!-- News List -->
-                <div class="news">
-                    <a href="#demo" class="w3-text-white" data-toggle="collapse">
-                        <i class="fa fa-search"></i>
-                        <h4>{{row.title}}</h4>
-                        <p>{{row.date}} &nbsp; {{row.press}}</p>
-                        <h6>{{row.topkeyword}}</h6></a>
-                      <div id="demo" class="collapse">
-                          <h4></h4>
-                          <p>{{row.url}}</p>
+      <div class="section-title"><h2>Article</h2></div>
+      <div class="list">
+          <h3 style="margin-left:30px"> Number of Articles : {{ total_cnt }}</h3>
+          <div class="info">
+              <!-- News List -->
+              {% for row in erows %}
+              <div class="news">
+                  <div class="panel-group" id="accordion">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <a href="#collapse{{forloop.counter}}" data-toggle="collapse" data-parent="#accordion" class="w3-text-white">
+                                  <i class="fa fa-search"></i>
+                                  <h4>{{row.title}}</h4>
+                                  <p>{{row.date}} &nbsp; {{row.press}}</p>
+                              </a>
+                          </div>
+                          <div id="collapse{{forloop.counter}}" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <p>{{row.topkeyword}}</p>
+                                  <p>{{row.url}}</p>
+                              </div>
+                          </div>
                       </div>
-                </div>
-                {% endfor %}
+                  </div>
+              </div>
+              {% endfor %}
             </div>
         </div>
-
-    </section>
-
-
+  </section>
 
 
 
