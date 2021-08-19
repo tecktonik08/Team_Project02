@@ -4,10 +4,9 @@ import networkx as nx
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from apyori import apriori
 from wordcloud import WordCloud
 from collections import Counter
-
-
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -43,7 +42,7 @@ def news(request):
     result['erows'] = data
 
 
-    # 개수
+    # 뉴스기사 개수
     c.execute("select count(*) from newspapers where topkeyword like '%{}%';".format(keyword))
     cnt_curs = c.fetchone()
     total_cnt =  int(cnt_curs[0])
@@ -56,7 +55,7 @@ def news(request):
      for i in range(len(keylist)):
         count = Counter(keylist[i])
         count.update(keylist[i])
-     remove_char_counter = Counter({x: count[x] for x in count if len(x) > 2})
+    remove_char_counter = Counter({x: count[x] for x in count if len(x) > 2})
     wordcloud = WordCloud(relative_scaling=0.2, background_color='black',
                           font_path="static/NanumBarunGothic.ttf",
                           mode='RGB', collocations=True, colormap=None,
@@ -66,14 +65,16 @@ def news(request):
     plt.imshow(wordcloud, interpolation="nearest", aspect="auto")
     plt.axis("off")
     plt.savefig('static/image/'+keyword + 'wc.png')
+
     result['wc'] = 'static/image/'+keyword + 'wc.png'
+
 
     # 네트워크 그래프
 
 
-
-
     return render(request, 'news.html', result)
+
+
 
 
 
@@ -177,6 +178,7 @@ def analysis(request):
     }
     return render(request, 'analysis.html', context)
 
+
 def test(request):
     keys = [-0.95, -0.9, -0.85, -0.8, -0.7, -0.65, -0.6, -0.55, -0.5, -0.45, -0.4, -0.35, -0.3, -0.25, -0.2, -0.15, -0.1, 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
     totals = [18, 11, 10, 18, 256, 74, 104, 106, 331, 136, 13, 3, 12, 0, 10, 3, 3, 3, 3, 40, 0, 28, 35, 9, 13, 21, 8, 0, 8, 13, 70, 16, 2]
@@ -193,5 +195,3 @@ def test(request):
     }
     return render(request, 'test.html', context)
 
-def sample(request):
-    return render(request, 'sample.html')
