@@ -3,7 +3,7 @@
 
 
  #### :white_square_button: 개요
- 기사의 편향성을 보기위해 국민일보, 경향일보, 중앙일보에서 스크래핑한 17000건의 기사를 Mecab과 KNU 감성사전(https://github.com/park1200656/KnuSentiLex)을 활용하여 단어분석을 통해 기사의 내용을 긍정/중립/부정으로 분류하였습니다. 또한 분류된 각 기사의 결과를 긍정(1)/중립(0)/부정(-1)으로 환산하여 y값에 대입, 기사의 본문 내용을 x값으로 하여 Keras Model을 통해 긍정/중립/부정 예측과 그 정확도를 분석하였습니다. 
+ 기사의 편향성을 보기위해 국민일보, 경향일보, 중앙일보에서 스크래핑한 17000건의 기사를 Mecab과 KNU 감성사전(https://github.com/park1200656/KnuSentiLex)을 활용하여 단어분석을 통해 기사의 내용을 긍정/중립/부정으로 분류하였습니다. 또한 분류된 각 기사의 결과를 긍정(1)/중립(0)/부정(-1)으로 환산하여 y값에 대입, 기사의 본문 내용을 x값으로 하여 Keras Model을 통해 긍정/중립/부정 예측과 그 정확도를 분석하였습니다. <br>
 
 
 #### :white_square_button: 기사에 사용된 단어를 통한 긍정/부정 분류​
@@ -19,7 +19,7 @@
 <br>형태소 분석으로 나뉘어진 단어의 긍정/중립/부정을 판단할 단어사전을 불러옵니다.
 
 ![image](https://user-images.githubusercontent.com/85272350/130142840-d97d7c34-5ce5-4471-b51f-eece0a07ef4e.png)
-<br>딥러닝 분석을 통해 각 기사의 긍정/중립/부정과 단어와 사용빈도 수를 분류합니다.
+<br>딥러닝 분석을 통해 각 기사의 긍정/중립/부정과 단어와 사용빈도 수를 분류합니다.<br>
 
 #### :white_square_button: 뉴스의 긍정, 부정 판단
 
@@ -28,7 +28,7 @@
 <br>긍정/중립/부정 기준을 바꿔가며, 실제 기사의 내용과 일치하는 지 여부를 판단합니다. 
 
 ![image](https://user-images.githubusercontent.com/85272350/130143238-2fb15da3-3225-419f-8feb-85fb96b1c935.png)
-<br> 기준을 통해 긍정/중립/부정을 판단하는 함수를 생성합니다.
+<br> 기준을 통해 긍정/중립/부정을 판단하는 함수를 생성합니다.<br>
 
 
 #### :white_square_button: Keras Model을 통한 결과 예측
@@ -50,7 +50,7 @@
 
 ![image](https://user-images.githubusercontent.com/85272350/130078799-c9992f00-434d-46d5-a417-6eec52bd1f34.png)
 <br>keras 그림
-<br>Keras model을 생성합니다.
+<br>Keras model을 생성합니다.<br>
 
 #### :white_square_button: 시각화
 
