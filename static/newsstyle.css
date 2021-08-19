@@ -8,7 +8,6 @@ body {
   background-position: center;
 
 }
-
 body::before {
   content: "";
   position: absolute;
@@ -16,9 +15,15 @@ body::before {
   right: 0;
   top: 0;
   bottom: 0;
-  /*background: rgba(49, 71, 89, 0.6);*/
 }
-
+  a {
+    color: #24b7a4;
+    text-decoration: none;
+  }
+  a:hover {
+     color: #24b7a4;
+     text-decoration: none;
+   }
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,25 +33,26 @@ ul {
   position: sticky;
   top: 0;
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
   text-align: center;
+  font-size: 18px;
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:hover {
   background-color: #111;
 }
 .active {
     background-color: #198073;
 }
+    li a:hover {
+      background-color: #111;
+    }
 
 
 @media (min-width: 1024px) {
@@ -55,29 +61,24 @@ li a:hover {
   }
 }
 
-
 .news {
   color: #ffffff;
   text-decoration: none;
 }
-
 .news:hover {
   color: #36d8c3;
   text-decoration: none;
 }
 
-
 #main {
   position: relative;
 }
-
 
 #header {
   position: relative;
   width: 100%;
   padding: 80px 0;
 }
-
 #header h1 {
   margin: 0 0 10px 0;
   font-size: 36px;
@@ -85,7 +86,6 @@ li a:hover {
   line-height: 56px;
   color: #fff;
 }
-
 #header h2 {
   color: #eee;
   margin-bottom: 40px;
@@ -101,7 +101,6 @@ li a:hover {
     transform: rotate(360deg);
   }
 }
-
 @keyframes animate-loading-notify {
   0% {
     transform: rotate(0deg);
@@ -111,10 +110,10 @@ li a:hover {
   }
 }
 
-
 section {
   padding: 60px 0;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .section-bg {
@@ -212,7 +211,6 @@ section {
 
 
 /* news list */
-
 .list .info {
   border-top: 3px solid #24b7a4;
   border-bottom: 3px solid #24b7a4;
@@ -238,17 +236,12 @@ section {
 .list .info h4 {
   padding: 0 0 0 60px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 .list .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 5px;
-  font-size: 15px;
-}
-.list .info h6 {
-  padding: 0 0 10px 60px;
-  margin-bottom: 10px;
   font-size: 18px;
 }
 
@@ -257,18 +250,7 @@ section {
   color: #fff;
 }
 
-/* demo */
-.demo h4 {
-  padding: 0 0 0 60px;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.demo p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 5px;
-  font-size: 15px;
-}
+
 
 @-webkit-keyframes animate-loading {
   0% {

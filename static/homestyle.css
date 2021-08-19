@@ -20,22 +20,20 @@
       position: sticky;
       top: 0;
     }
-
     li {
       float: left;
     }
-
     li a {
       display: block;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
+      font-size: 18px;
     }
     li a:hover {
       background-color: #111;
     }
-
   a {
     color: #24b7a4;
     text-decoration: none;
