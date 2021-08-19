@@ -15,8 +15,20 @@
 ![image](https://user-images.githubusercontent.com/85272350/130070986-54d18e8a-8513-4992-ad15-316a670009a3.png)
 <br>re모듈의 sub함수를 활용하여 가~힣, 한글 자음과 ㅠ를 제외한 문자를 ''로 대체하고 Stopwords 리스트를 활용하여 조사와 불용어 등을 제외합니다.
 
+![image](https://user-images.githubusercontent.com/85272350/130144815-5f9bd874-e4e5-4445-8cc0-06beb126e01c.png)
+<br>형태소 분석으로 나뉘어진 단어의 긍정/중립/부정을 판단할 단어사전을 불러옵니다.
+
+![image](https://user-images.githubusercontent.com/85272350/130142840-d97d7c34-5ce5-4471-b51f-eece0a07ef4e.png)
+<br>딥러닝 분석을 통해 각 기사의 긍정/중립/부정과 단어와 사용빈도 수를 분류합니다.
+
 #### :white_square_button: 뉴스의 긍정, 부정 판단
 
+![image](https://user-images.githubusercontent.com/85272350/130144229-5ae4cdf1-9a29-47c7-8938-1cdf91b40c6c.png)
+![image](https://user-images.githubusercontent.com/85272350/130144267-c87b0583-80ea-48fd-8e9e-51242425eb50.png)
+<br>긍정/중립/부정 기준을 바꿔가며, 실제 기사의 내용과 일치하는 지 여부를 판단합니다. 
+
+![image](https://user-images.githubusercontent.com/85272350/130143238-2fb15da3-3225-419f-8feb-85fb96b1c935.png)
+<br> 기준을 통해 긍정/중립/부정을 판단하는 함수를 생성합니다.
 
 
 #### :white_square_button: Keras Model을 통한 결과 예측
