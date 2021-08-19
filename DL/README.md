@@ -3,26 +3,30 @@
 
 
  #### :white_square_button: 개요
+ 기사의 편향성을 보기위해 국민일보, 경향일보, 중앙일보에서 스크래핑한 17000건의 기사를 Mecab과 KNU 감성사전(https://github.com/park1200656/KnuSentiLex)을 활용하여 단어분석을 통해 기사의 내용을 긍정/중립/부정으로 분류하였습니다. 또한 분류된 각 기사의 결과를 긍정(1)/중립(0)/부정(-1)으로 환산하여 y값에 대입, 기사의 본문 내용을 x값으로 하여 Keras Model을 통해 긍정/중립/부정 예측과 그 정확도를 분석하였습니다. 
 
 
+#### :white_square_button: 기사에 사용된 단어를 통한 긍정/부정 분류​
 
-#### :white_square_button: ​
+Mecab을 활용한 한국어 형태소 분석
+![image](https://user-images.githubusercontent.com/85272350/130069716-82533f59-75d8-495e-bb19-cdb65b4131fa.png)
+수업시간에 배운 Okt와 Mecab 중 Mecab의 형태소 분석이 더 정확하다는 의견이 많아 Mecab을 활용하여 아래와 같은 함수에 활용하였습니다.
+![image](https://user-images.githubusercontent.com/85272350/130070986-54d18e8a-8513-4992-ad15-316a670009a3.png)
 
 
+#### :white_square_button: Keras Model을 통한 결과 예측
+
+분류된 결과
+![image](https://user-images.githubusercontent.com/85272350/130069275-1b0b564d-8c7e-47a0-a705-3a1bb00368a6.png)
+
+![image](https://user-images.githubusercontent.com/85272350/130070412-85d33fa3-e818-46f5-b2ce-fcb90dc3b8f9.png)
+Mecab을 통하여 x값(기사 본문)을 각 형태소별로 나눠줍니다.
 
 #### :white_square_button: 
-
-
-
-#### :white_square_button: 
-
-#### 
-
-#### :white_square_button: 웹 페이지 구현
 
 
 
 #### :white_square_button: 시각화
 
-
+워드클라우드를 통해 긍정적인 
 
