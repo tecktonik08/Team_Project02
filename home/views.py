@@ -28,7 +28,7 @@ def home(request):
 
 def news(request):
     result = dict()
-    db_news = sqlite3.connect('static/reset.db')
+    db_news = sqlite3.connect('static/all.db')
     db_news.row_factory = sqlite3.Row
     c = db_news.cursor()
 
@@ -79,8 +79,8 @@ def news(request):
 
 
 def analysis(request):
-    return render(request, 'analysis.html')
-    db_news = sqlite3.connect('static/reset.db')
+    # return render(request, 'analysis.html')
+    db_news = sqlite3.connect('static/all.db')
     c = db_news.cursor()
 
     score = {-0.95: ['홍익표', '여영국', '윤소하'],
