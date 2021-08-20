@@ -1,10 +1,8 @@
 import sqlite3
-import mpld3
-import networkx as nx
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from apyori import apriori
 from wordcloud import WordCloud
 from collections import Counter
 from django.http import HttpResponse
@@ -68,8 +66,6 @@ def news(request):
 
     result['wc'] = 'static/image/'+keyword + 'wc.png'
 
-
-    # 네트워크 그래프
 
 
     return render(request, 'news.html', result)
