@@ -21,6 +21,14 @@
 ![image](https://user-images.githubusercontent.com/85272350/130142840-d97d7c34-5ce5-4471-b51f-eece0a07ef4e.png)
 <br>딥러닝 분석을 통해 각 기사의 긍정/중립/부정과 단어와 사용빈도 수를 분류합니다.<br>
 
+#### :white_square_button: 감성어휘사전
+
+![image](https://user-images.githubusercontent.com/85272350/130167074-dee2dc05-9240-4cbe-9973-c2d412b91c22.png)
+<br>KNU 감성어휘사전 (https://github.com/park1200656/KnuSentiLex)
+<br>mecab으로 분류된 단어의 어근들은 감성 사전의 점수를 기준으로 분류됩니다. 위의 보기와 같이 가난 또는 가난뱅이 등의 단어가 기사에 나오면 모두 어근인 '가난'으로 통일하여 워드클라우드에 보여주고 -1의 점수를 통해 부정적인 어휘로 분류됨을 볼 수 있습니다. 우리의 경우에는 이미 위에서 단어를 어근으로 분류했기 때문에 에, 하게와 같이 다양한 바리에이션이 필요하지 않습니다.
+
+<br> 
+
 #### :white_square_button: 뉴스의 긍정, 부정 판단
 
 ![image](https://user-images.githubusercontent.com/85272350/130144229-5ae4cdf1-9a29-47c7-8938-1cdf91b40c6c.png)
