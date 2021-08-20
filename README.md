@@ -1,13 +1,14 @@
-
-&nbsp;
 # :newspaper:뉴스 기사 헤드라인 & 내용 스크래핑을 통한 감성 분석 및 예측 :thumbsup::thumbsdown:
 
-&nbsp;
+###### 멀티캠퍼스  빅데이터 기반 지능형 서비스 개발  Semi Project 2차 
+
+
+
 ## :eyes: Overview
 
-- ### 관심있는 주제를 다루는 뉴스 기사를 스크래핑해,  빈번하게 언급되는 상위 키워드에 대한 감성분석 
+- ### 관심있는 주제를 다루는 뉴스 기사를 스크래핑해,   감성분석 및 연관있는 키워드 시각화
 
-- ### 언론사마다 자주 다루는 주제 파악 및 감성분석을 통해,  언론사별 특성 분석
+- ### 언론사마다 자주 다루는 주제 파악 및 감성분석을 통해,  언론사의 보도 경향성 분석
 
 &nbsp;
 ## :pencil2: Skills & Method
@@ -18,13 +19,14 @@
 
 &nbsp;
 ## :dancers: Team Role
-- #### [권회동](https://github.com/tecktonik08) : PM
+- #### [권회동](https://github.com/tecktonik08) : PM, Deep Learning
 
-- #### [임태혁](https://github.com/creamcheesesteak) : Web Scraping 
+- #### [임태혁](https://github.com/creamcheesesteak) : Web Scraping, Deep Learning
 
-- #### [서미오](https://github.com/mmeooo) :  Web Server  
+- #### [서미오](https://github.com/mmeooo) :  Web Server, Web Design
 
-- #### [유설영](https://github.com/junanote) : Deep Learning 
+  
+
 
 &nbsp;
 ## :clock3: Project Scheduling
