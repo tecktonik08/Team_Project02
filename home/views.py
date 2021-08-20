@@ -35,7 +35,7 @@ def news(request):
     result['keyword'] = keyword
 
     # 키워드를 다룬 뉴스기사들
-    c.execute("select id,date,press,title,topkeyword,total_body,url from newspapers where topkeyword like '%{}%';".format(keyword))
+    c.execute("select judge_ko,pos_dict, neg_dict, id,date,press,title,topkeyword,total_body,url from newspapers where topkeyword like '%{}%';".format(keyword))
     data = c.fetchall()
     result['erows'] = data
 

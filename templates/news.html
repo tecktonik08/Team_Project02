@@ -57,7 +57,7 @@
                           <div class="panel-heading">
                               <a href="#collapse{{forloop.counter}}" data-toggle="collapse" data-parent="#accordion" class="w3-text-white">
                                   <i class="fa fa-search"></i>
-                                  <h4>{{row.title}}</h4>
+                                  <h4>{{row.title}}&nbsp;<span style="font-size: 20px; font-style: italic;">&nbsp;( {{row.judge_ko}} )</span></h4>
                                   <p>{{row.date}} &nbsp;{{row.press}}</p>
                               </a>
                           </div>
@@ -65,6 +65,8 @@
                               <div class="panel-body">
                                   <p>{{row.topkeyword}}</p>
                                   <p><a href="{{row.url}}" target="_blank">{{row.url}}</a></p>
+                                  <p>긍정단어 빈도 = {{row.pos_dict}}</p>
+                                  <p>부정단어 빈도 = {{row.neg_dict}}</p>
                               </div>
                           </div>
                       </div>
